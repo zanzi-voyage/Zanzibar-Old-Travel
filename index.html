@@ -67,6 +67,11 @@ body{
 
 
 
+
+
+
+
+
   <style>
 *{
   margin: 0;
@@ -75,13 +80,17 @@ body{
   scroll-behavior: smooth;
 }
 
-/* NAVBAR STICKY */
+body{
+  padding-top: 70px; /* muhimu sana kwa fixed navbar */
+}
+
+/* NAVBAR */
 .navbar{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +112,7 @@ body{
   cursor: pointer;
 }
 
-/* DROPDOWN MENU */
+/* MENU LINKS */
 .nav-links{
   position: absolute;
   top: 60px;
@@ -113,6 +122,7 @@ body{
   display: none;
   flex-direction: column;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .nav-links a{
@@ -126,49 +136,22 @@ body{
   background: #00bcd4;
 }
 
-/* HERO */
+/* HERO (example) */
 .hero{
   height: 100vh;
   background: url("https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
 
-/* SECTIONS TEST */
+/* OTHER SECTIONS */
 section{
   height: 100vh;
   padding: 20px;
 }
 </style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-<div class="navbar">
-  <div class="logo">Zanzibar Old Travel</div>
-
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-  <div class="nav-links" id="navLinks">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#tours">Tours</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="home"></section>
-
-<!-- OTHER SECTIONS -->
-<section id="about">About Section</section>
-<section id="tours">Tours Section</section>
-<section id="contact">Contact Section</section>
-
-<script>
-function toggleMenu(){
-  var menu = document.getElementById("navLinks");
-  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-}
-</script>
