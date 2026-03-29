@@ -9,64 +9,105 @@
 
 
 
-<div class="tour-box">
 
-  <a href="index.html" class="back-home">← Back Home</a>
+
+
 
 <style>
-.back-home{
-  display: inline-block;
-  padding: 8px 14px;
-  font-size: 30px;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.6);
-  transition: 0.3s;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* hover effect */
-.back-home:hover{
-  border-color: white;
-  transform: scale(1.05);
+/* FIXED NAVBAR */
+.navbar{
+  position: fixed;   /* hii ndiyo muhimu */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 9999;
 }
+
+.logo{
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* 3 lines icon */
+.menu-icon{
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MENU */
+.nav-links{
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: rgba(0,0,0,0.95);
+  width: 200px;
+  display: none;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.nav-links a{
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-links a:hover{
+  background: #00bcd4;
+}
+.nav-links.show{
+  display: flex;
+}
+
 </style>
-  
-  <h2>OUR TOURS</h2>
-  <p>
-    We offer unforgettable adventure experiences across Zanzibar and Tanzania.
-    From safari trips, beach adventures, cultural tours to city exploration,
-    we make every journey special and memorable for our clients.
-  </p>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">Zanzibar Old Travel</div>
+
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#tours">Tours</a>
+    <a href="#contact">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </div>
 </div>
 
-<style>
-.tour-box {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 60px 40px;
-  border-radius: 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #00c853, #00bcd4);
-  color: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+  
 
-/* TITLE BIG */
-.tour-box h2 {
-  font-size: 55px;
-  font-weight: 900;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
-}
 
-/* PARAGRAPH BIG */
-.tour-box p {
-  font-size: 42px;
-  line-height: 2;
-  font-weight: 500;
+
+
+<script>
+function toggleMenu(){
+  var menu = document.getElementById("navLinks");
+  menu.classList.toggle("show");
 }
-</style>
+</script>
+
+
+
+
 
 
 
@@ -75,9 +116,7 @@
 
 
   
-
-  
-<style>
+  <style>
 body{
   font-family: Arial;
   background:#f5f5f5;
