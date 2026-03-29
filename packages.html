@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packages</title>
 
+<style>
+body{
+  font-family: Arial;
+  background:#f5f5f5;
+  padding:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+/* CONTENT */
+.card-body{
+  padding:20px;
+}
+
+.tag{
+  color:orange;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.title{
+  font-size:22px;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.location{
+  color:#777;
+  font-size:14px;
+}
+
+.desc{
+  font-size:14px;
+  color:#555;
+  margin:10px 0;
+}
+
+/* FOOTER */
+.card-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:15px 0;
+}
+
+.rating{
+  color:orange;
+  font-weight:bold;
+}
+
+.price{
+  font-weight:bold;
+  color:#ff6600;
+}
+
+/* BUTTON */
+.btn{
+  display:block;
+  text-align:center;
+  background:orange;
+  color:white;
+  padding:12px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="grid">
+
+<!-- CARD 1 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">ADVENTURE • Half Day</div>
+<div class="title">Jozani Forest Tour</div>
+<div class="location">📍 Jozani, Zanzibar</div>
+<div class="desc">Explore Zanzibar’s only national park and meet red colobus monkeys.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.8</div>
+<div class="price">$100/person</div>
+</div>
+
+<a href="jozani.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- COPY HII MARA 10 (TOFAUTISHA TU MAJINA NA PICHA) -->
+
+<!-- CARD 2 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">BEACH • Full Day</div>
+<div class="title">Safari Blue Tour</div>
+<div class="location">📍 Fumba, Zanzibar</div>
+<div class="desc">Enjoy snorkeling, seafood lunch and crystal clear waters.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.9</div>
+<div class="price">$120/person</div>
+</div>
+
+<a href="safari-blue.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">CITY • Half Day</div>
+<div class="title">Stone Town Tour</div>
+<div class="location">📍 Stone Town</div>
+<div class="desc">Discover history, culture and local markets.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.7</div>
+<div class="price">$50/person</div>
+</div>
+
+<a href="stonetown.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 4 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">WILDLIFE • Half Day</div>
+<div class="title">Dolphin Tour</div>
+<div class="location">📍 Kizimkazi</div>
+<div class="desc">Swim with dolphins in their natural habitat.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.6</div>
+<div cla<img src="unnamed (5).webp">ss="price">$80/person</div>
+</div>
+
+<a href="dolphin.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 5 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">NATURE • Half Day</div>
+<div class="title">Spice Farm Tour</div>
+<div class="location">📍 Zanzibar</div>
+<div class="desc">Experience spices and tropical fruits.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.5</div>
+<div class="price">$40/person</div>
+</div>
+
+<a href="spice.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 6 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">ISLAND • Half Day</div>
+<div class="title">Prison Island</div>
+<div class="location">📍 Zanzibar</div>
+<div class="desc">Visit giant tortoises and historic prison.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.6</div>
+<div class="price">$60/person</div>
+</div>
+
+<a href="prison.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 7 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">SEA • Evening</div>
+<div class="title">Sunset Cruise</div>
+<div class="location">📍 Zanzibar</div>
+<div class="desc">Romantic dhow cruise with sunset views.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.9</div>
+<div class="price">$90/person</div>
+</div>
+
+<a href="sunset.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 8 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">TRANSFER</div>
+<div class="title">Airport Transfer</div>
+<div class="location">📍 Zanzibar</div>
+<div class="desc">Comfortable private airport transport.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 4.8</div>
+<div class="price">$30</div>
+</div>
+
+<a href="transfer.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 9 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">SAFARI • Full Day</div>
+<div class="title">Mikumi Safari</div>
+<div class="location">📍 Tanzania</div>
+<div class="desc">See lions, elephants and wildlife.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 5.0</div>
+<div class="price">$350/person</div>
+</div>
+
+<a href="mikumi.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+<!-- CARD 10 -->
+<div class="card">
+<img src="unnamed (5).webp">
+<div class="card-body">
+<div class="tag">COMBO</div>
+<div class="title">Full Zanzibar Combo</div>
+<div class="location">📍 Zanzibar</div>
+<div class="desc">All top tours in one package.</div>
+
+<div class="card-footer">
+<div class="rating">⭐ 5.0</div>
+<div class="price">$500/person</div>
+</div>
+
+<a href="combo.html" class="btn">VIEW DETAILS →</a>
+</div>
+</div>
+
+</div>
+
+</body>
+  </html>
