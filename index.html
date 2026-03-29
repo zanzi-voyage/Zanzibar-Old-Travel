@@ -185,7 +185,14 @@ function toggleMenu(){
 
   <!-- 1 -->
   <div class="tour-card">
-    <img src="https://source.unsplash.com/600x400/?zanzibar,beach" alt="">
+    <img src="unnamed (5).webp">
+<div class="overlay">
+    <span class="rating">⭐ 4.9</span>
+    <span class="price">$110</span>
+  </div>
+  </div>
+
+    
     <h3>Beach Tours <span class="time">7hrs</span></h3>
     
     <h4>Safari Blue Tour - Full Day Sea Adventure in Zanzibar</h4>
@@ -259,6 +266,52 @@ function toggleMenu(){
 </div>
 
 <style>
+
+
+
+
+.image-box{
+  position: relative;
+}
+
+.image-box img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.overlay{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* RATING */
+.overlay .rating{
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* PRICE */
+.overlay .price{
+  background: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+
+
+
+  
 .tours-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
