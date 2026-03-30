@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanzibar Transfers - 7 Boxes</title>
+    <style>
+        :root {
+            --primary-orange: #ff8c00;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* Grid Layout kwa ajili ya Box 7 */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .icon-box {
+            background: #fff5eb;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 12px;
+            height: fit-content;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .header p {
+            margin: 4px 0 0 0;
+            color: #777;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            background: #fafafa;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .stat {
+            flex: 1;
+        }
+
+        .stat b {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .stat span {
+            font-size: 0.7rem;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        .price-tag {
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        .features {
+            margin: 0 0 20px 0;
+            padding: 0;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .features li {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 6px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "•";
+            color: var(--primary-orange);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .btn {
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Badge ya namba ya Box */
+        .box-number {
+            font-size: 0.7rem;
+            background: #333;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="grid-container">
+    </div>
+
+<script>
+    const container = document.getElementById('grid-container');
+    
+    // Tunatengeneza box 7 kwa kutumia Loop
+    for (let i = 1; i <= 7; i++) {
+        container.innerHTML += `
+            <div class="card">
+                <div class="box-number">Box ${i}</div>
+                <div class="header">
+                    <div class="icon-box">🚢</div>
+                    <div>
+                        <h2>Ferry Port Transfer</h2>
+                        <p>To/from North & South beach hotels</p>
+                    </div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat">
+                        <b>40-70m</b>
+                        <span>Time</span>
+                    </div>
+                    <div class="stat">
+                        <b>1-4</b>
+                        <span>Pax</span>
+                    </div>
+                    <div class="stat">
+                        <b class="price-tag">$35</b>
+                        <span>Per Car</span>
+                    </div>
+                </div>
+
+                <ul class="features">
+                    <li>Flexible timing</li>
+                    <li>Port assistance</li>
+                    <li>Safe & secure</li>
+                    <li>Experienced drivers</li>
+                </ul>
+
+                <button class="btn">Book Now</button>
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>
 
