@@ -1,104 +1,67 @@
-<style>
-.city-boxes{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
-  padding: 30px;
-}
-
-.box{
-  background:#fff;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.box img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-.box-content{
-  padding:15px;
-}
-
-.box-content h3{
-  margin-bottom:10px;
-  color:#ff7b00;
-}
-
-.box-content p{
-  font-size:14px;
-  color:#444;
-}
-</style>
-
-<div class="city-boxes">
-
-  <div class="box">
-    <img src="unnamed (5).webp">
-    <div class="box-content">
-      <h3>Old Fort</h3>
-      <p>Old Fort ni moja ya majengo ya kihistoria yaliyopo Stone Town. Ilijengwa na Waarabu kwa ajili ya ulinzi na leo ni sehemu ya utalii, maonyesho ya sanaa na matamasha mbalimbali ya Zanzibar.</p>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="unnamed (5).webp">
-    <div class="box-content">
-      <h3>House of Freddie Mercury</h3>
-      <p>Hapa ndipo alipozaliwa mwanamuziki maarufu Freddie Mercury. Nyumba hii iko Stone Town na huvutia watalii wengi wanaopenda historia ya muziki na maisha yake.</p>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="unnamed (5).webp">
-    <div class="box-content">
-      <h3>Shopping</h3>
-      <p>Zanzibar ina maeneo mengi ya shopping kama masoko na maduka ya souvenirs. Unaweza kununua spices, vinyago, nguo za kienyeji na vitu vya kumbukumbu.</p>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="unnamed (5).webp">
-    <div class="box-content">
-      <h3>Historical Church</h3>
-      <p>Makanisa ya kihistoria Zanzibar yanaonyesha historia ya dini na ukoloni. Ni sehemu muhimu ya kujifunza historia na utamaduni wa visiwa hivi.</p>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="unnamed (5).webp">
-    <div class="box-content">
-      <h3>Market Tour</h3>
-      <p>Market tour hukupa nafasi ya kuona maisha halisi ya wenyeji. Utatembelea masoko kama Darajani, kuona vyakula, samaki, matunda na biashara za kila siku.</p>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <style>
-.city-boxes{
-  display: grid;
-  grid-template-columns: 1fr; /* hii inalazimisha moja moja */
-  gap: 20px;
-  padding: 30px;
-}
+  /* Hii ndio inazipanga ziwe pembeni (Flexbox) */
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Inazifanya zishuke chini kama nafasi imeisha */
+    gap: 20px;       /* Nafasi kati ya boksi na boksi */
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f7f6;
+  }
+
+  .tour-card {
+    width: 320px; /* Upana wa kila boksi */
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+  }
+
+  .tour-card:hover {
+    transform: translateY(-5px); /* Boksi linajisogeza juu kidogo kikiguswa */
+  }
+
+  .image-container { position: relative; width: 100%; height: 180px; }
+  .image-container img { width: 100%; height: 100%; object-fit: cover; }
+
+  .badge {
+    position: absolute; top: 10px; left: 10px;
+    background: #ff8c00; color: white;
+    padding: 4px 12px; border-radius: 20px;
+    font-size: 11px; font-weight: bold;
+  }
+
+  .content { padding: 15px; }
+
+  .category { color: #ff8c00; font-weight: bold; font-size: 12px; margin: 0; }
+  .duration { float: right; color: #888; font-weight: normal; }
+
+  .title { 
+    font-size: 19px; margin: 8px 0; color: #222; 
+    font-weight: 800; /* Maandishi ya Bold */
+  }
+
+  .location { color: #888; font-size: 13px; margin-bottom: 10px; }
+
+  .description { 
+    color: #666; font-size: 13px; line-height: 1.4; 
+    font-weight: 400; /* Maandishi ya kawaida */
+    height: 40px; overflow: hidden;
+  }
+
+  .divider { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
+
+  .footer { display: flex; justify-content: space-between; align-items: center; }
+  .rating { font-size: 13px; font-weight: bold; }
+  .price { font-size: 11px; color: #888; }
+  .price span { color: #ff8c00; font-size: 16px; font-weight: bold; }
+
+  .view-details {
+    width: 100%; background: #ff8c00; color: white;
+    border: none; padding: 10px; border-radius: 8px;
+    margin-top: 15px; font-weight: bold; cursor: pointer;
+  }
 </style>
