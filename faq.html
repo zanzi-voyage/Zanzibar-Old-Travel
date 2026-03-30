@@ -263,6 +263,296 @@ body{
 
 
 
+
+
+
+
+<!-- GOOGLE TRANSLATE HIDE FIX (ONLY ONCE) -->
+<style>
+.goog-te-banner-frame,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+.goog-te-gadget span {
+  display: none !important;
+}
+</style>
+
+<script>
+// toggle dropdown
+function toggleLang(){
+  const box = document.getElementById("langBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+// set language using Google Translate
+function setLang(lang){
+  let select = document.querySelector("select.goog-te-combo");
+  if(select){
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- GOOGLE TRANSLATE HIDE FIX (ONLY ONCE) -->
+<style>
+.goog-te-banner-frame,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+.goog-te-gadget span {
+  display: none !important;
+}
+</style>
+
+<script>
+// toggle dropdown
+function toggleLang(){
+  const box = document.getElementById("langBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+// set language using Google Translate
+function setLang(lang){
+  let select = document.querySelector("select.goog-te-combo");
+  if(select){
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- GOOGLE TRANSLATE HIDE FIX (ONLY ONCE) -->
+<style>
+.goog-te-banner-frame,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+.goog-te-gadget span {
+  display: none !important;
+}
+</style>
+
+<script>
+// toggle dropdown
+function toggleLang(){
+  const box = document.getElementById("langBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+// set language using Google Translate
+function setLang(lang){
+  let select = document.querySelector("select.goog-te-combo");
+  if(select){
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- GOOGLE TRANSLATE HIDE FIX (ONLY ONCE) -->
+<style>
+.goog-te-banner-frame,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+.goog-te-gadget span {
+  display: none !important;
+}
+</style>
+
+<script>
+// toggle dropdown
+function toggleLang(){
+  const box = document.getElementById("langBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+// set language using Google Translate
+function setLang(lang){
+  let select = document.querySelector("select.goog-te-combo");
+  if(select){
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+  }
+}
+</script>
+  <div id="google_translate_element"></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+<script>
+  function setLang(lang){
+  let check = setInterval(() => {
+    let select = document.querySelector("select.goog-te-combo");
+
+    if(select){
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+      clearInterval(check);
+    }
+  }, 300);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function setLang(lang) {
+  // Tunatafuta lile box la Google lililojificha
+  let select = document.querySelector("select.goog-te-combo");
+  if (select) {
+    select.value = lang;
+    // Inalazimisha Google itafsiri sasa hivi
+    select.dispatchEvent(new Event("change"));
+  } else {
+    // Kama box halijatokea bado, jaribu tena baada ya sekunde 1
+    setTimeout(() => setLang(lang), 1000);
+  }
+  
+  // Funga list yako baada ya kuchagua lugha
+  toggleLang();
+}
+
+function toggleLang() {
+  const box = document.getElementById("langBox");
+  if (box) {
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  }
+}
+</script>
+<style>
+  /* Ficha bar ya juu kabisa */
+  iframe.goog-te-banner-frame {
+    display: none !important;
+  }
+  body {
+    top: 0px !important;
+  }
+
+  /* Ficha lile box la Google (dropdown) ambalo hutaki lioneleke */
+  #google_translate_element, 
+  .goog-te-gadget, 
+  .goog-te-combo {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Hii inazuia page isishuke chini */
+  .skiptranslate {
+    display: none !important;
+  }
+</style>
+
+  
+
+
+  
+
+
+
+
+
+  
   
 
 </body>
