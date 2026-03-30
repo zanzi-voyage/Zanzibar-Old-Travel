@@ -367,121 +367,83 @@ function setLang(lang){
 
 
 
-  <!-- GOOGLE TRANSLATE HIDE FIX (ONLY ONCE) -->
+  
+
+
+<div class="lang-wrapper">
+    <div id="langBox" class="lang-dropdown">
+        <div onclick="setLang('it')"><img src="https://flagcdn.com/w20/it.png"> Italiano</div>
+        <div onclick="setLang('ru')"><img src="https://flagcdn.com/w20/ru.png"> Русский</div>
+        <div onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png"> English</div>
+        <div onclick="setLang('sw')"><img src="https://flagcdn.com/w20/tz.png"> Swahili</div>
+    </div>
+    
+    <button class="orange-btn" onclick="toggleLang()">
+       🌐 <span id="current-lang">EN</span>
+    </button>
+</div>
+
+<div id="google_translate_element" style="display:none;"></div>
 <style>
-.goog-te-banner-frame,
-.goog-te-balloon-frame {
-  display: none !important;
+/* Ficha kila kitu cha Google kisichotakiwa */
+.goog-te-banner-frame, .goog-te-balloon-frame, .goog-te-gadget, .goog-te-combo, .skiptranslate {
+    display: none !important;
+}
+body { top: 0px !important; position: static !important; }
+
+/* Mtindo wa kitufe chako cha machungwa */
+.lang-wrapper { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+.orange-btn { 
+    background: #ff8c00; color: white; border: none; padding: 10px 20px; 
+    border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-body {
-  top: 0px !important;
-  position: static !important;
+/* Mtindo wa list ya lugha (langBox) */
+.lang-dropdown {
+    display: none; background: white; border-radius: 10px; position: absolute;
+    bottom: 50px; right: 0; width: 150px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
-
-.goog-te-gadget {
-  color: transparent !important;
+.lang-dropdown div {
+    padding: 10px; cursor: pointer; color: #333; display: flex; align-items: center; gap: 10px;
 }
-.goog-te-gadget span {
-  display: none !important;
-}
+.lang-dropdown div:hover { background: #f0f0f0; }
+.lang-dropdown img { width: 20px; }
 </style>
-
 <script>
-// toggle dropdown
-function toggleLang(){
-  const box = document.getElementById("langBox");
-  box.style.display = box.style.display === "block" ? "none" : "block";
+// 1. Inafungua na kufunga list ya lugha
+function toggleLang() {
+    const box = document.getElementById("langBox");
+    box.style.display = (box.style.display === "block") ? "none" : "block";
 }
 
-// set language using Google Translate
-function setLang(lang){
-  let select = document.querySelector("select.goog-te-combo");
-  if(select){
-    select.value = lang;
-    select.dispatchEvent(new Event("change"));
-  }
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- GOOGLE TRANSLATE HIDE FIX (ONLY ONCE) -->
-<style>
-.goog-te-banner-frame,
-.goog-te-balloon-frame {
-  display: none !important;
+// 2. Inabadilisha lugha kisiri kupitia Google
+function setLang(lang) {
+    let select = document.querySelector("select.goog-te-combo");
+    if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+        document.getElementById("current-lang").innerText = lang.toUpperCase();
+        toggleLang(); // Funga list baada ya kuchagua
+    } else {
+        // Ikishindikana, jaribu tena baada ya muda mfupi
+        setTimeout(() => setLang(lang), 500);
+    }
 }
 
-body {
-  top: 0px !important;
-  position: static !important;
-}
-
-.goog-te-gadget {
-  color: transparent !important;
-}
-.goog-te-gadget span {
-  display: none !important;
-}
-</style>
-
-<script>
-// toggle dropdown
-function toggleLang(){
-  const box = document.getElementById("langBox");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
-
-// set language using Google Translate
-function setLang(lang){
-  let select = document.querySelector("select.goog-te-combo");
-  if(select){
-    select.value = lang;
-    select.dispatchEvent(new Event("change"));
-  }
-}
-</script>
-  <div id="google_translate_element"></div>
-
-<script>
+// 3. Google Translate Initialization
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    autoDisplay: false
-  }, 'google_translate_element');
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+    }, 'google_translate_element');
 }
 </script>
-
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 
 
-<script>
-  function setLang(lang){
-  let check = setInterval(() => {
-    let select = document.querySelector("select.goog-te-combo");
-
-    if(select){
-      select.value = lang;
-      select.dispatchEvent(new Event("change"));
-      clearInterval(check);
-    }
-  }, 300);
-}
-</script>
 
 
 
@@ -491,68 +453,7 @@ function googleTranslateElementInit() {
 
 
 
-
-
-
-
-
-<script>
-function setLang(lang) {
-  // Tunatafuta lile box la Google lililojificha
-  let select = document.querySelector("select.goog-te-combo");
-  if (select) {
-    select.value = lang;
-    // Inalazimisha Google itafsiri sasa hivi
-    select.dispatchEvent(new Event("change"));
-  } else {
-    // Kama box halijatokea bado, jaribu tena baada ya sekunde 1
-    setTimeout(() => setLang(lang), 1000);
-  }
-  
-  // Funga list yako baada ya kuchagua lugha
-  toggleLang();
-}
-
-function toggleLang() {
-  const box = document.getElementById("langBox");
-  if (box) {
-    box.style.display = box.style.display === "block" ? "none" : "block";
-  }
-}
-</script>
-<style>
-  /* Ficha bar ya juu kabisa */
-  iframe.goog-te-banner-frame {
-    display: none !important;
-  }
-  body {
-    top: 0px !important;
-  }
-
-  /* Ficha lile box la Google (dropdown) ambalo hutaki lioneleke */
-  #google_translate_element, 
-  .goog-te-gadget, 
-  .goog-te-combo {
-    display: none !important;
-    visibility: hidden !important;
-  }
-  
-  /* Hii inazuia page isishuke chini */
-  .skiptranslate {
-    display: none !important;
-  }
-</style>
-
-  
-
-
-  
-
-
-
-
-
-  
+    
   
 
 </body>
