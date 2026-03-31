@@ -1,0 +1,54 @@
+<section class="stone-town">
+  <h2>STONE TOWN</h2>
+
+</section>
+
+<style>
+.stone-town{
+  padding: 70px 20px;
+  max-width: 950px;
+  margin: auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f9fb;
+  border-left: 6px solid #000;
+  border-radius: 12px;
+}
+
+/* heading */
+.stone-town h2{
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  color: #111;
+  position: relative;
+}
+
+/* underline effect */
+.stone-town h2::after{
+  content: "";
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #000, #28a745);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* paragraphs */
+.stone-town p{
+  font-size: 18.5px;
+  line-height: 2;
+  margin-bottom: 18px;
+  color: #333;
+  padding: 0 10px;
+}
+
+/* hover effect */
+.stone-town:hover{
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+</style>
