@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+
+
+
+
+
+
+
+
 <section class="stone-town">
   <h2>SAFARI BLUE</h2>
 
@@ -28,7 +47,7 @@
 
 <style>
 .stone-town{
-  padding: 70px 20px;
+  padding: 30px 20px;
   max-width: 950px;
   margin: auto;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -40,7 +59,7 @@
 /* heading */
 .stone-town h2{
   text-align: center;
-  font-size: 48px;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 3px;
   margin-bottom: 30px;
@@ -61,7 +80,7 @@
 
 /* paragraphs */
 .stone-town p{
-  font-size: 47px;
+  font-size: 18px;
   line-height: 2;
   margin-bottom: 18px;
   color: #333;
@@ -75,3 +94,350 @@
   transition: 0.3s ease;
 }
 </style>
+
+
+
+
+
+
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FIXED NAVBAR */
+.navbar{
+  position: fixed;   /* hii ndiyo muhimu */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 9999;
+}
+
+.logo{
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* 3 lines icon */
+.menu-icon{
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MENU */
+.nav-links{
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: rgba(0,0,0,0.95);
+  width: 200px;
+  display: none;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.nav-links a{
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-links a:hover{
+  background: #00bcd4;
+}
+.nav-links.show{
+  display: flex;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">Zanzibar Old Travel</div>
+
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="packages.html">Tours</a>
+    <a href="#contact">Contact</a>
+    <a href="faq.html">FAQ</a>
+    <a href="booking.html">Booking</a>
+  </div>
+</div>
+
+  
+
+
+
+
+<script>
+function toggleMenu(){
+  var menu = document.getElementById("navLinks");
+  menu.classList.toggle("show");
+}
+  </script>
+
+
+
+
+
+
+  
+<style>
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+/* HOVER */
+.whatsapp-float:hover{
+  transform: scale(1.1);
+}
+
+/* ANIMATION */
+@keyframes pulse{
+  0%{ box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+  70%{ box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100%{ box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+.whatsapp-float{
+  animation: pulse 2s infinite;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/255678859687" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+
+
+
+
+
+
+
+
+
+  <div class="lang-wrapper">
+    <div id="langBox" class="lang-dropdown">
+        <div onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png"> English</div>
+        <div onclick="setLang('fr')"><img src="https://flagcdn.com/w20/fr.png"> Français</div>
+        <div onclick="setLang('it')"><img src="https://flagcdn.com/w20/it.png"> Italiano</div>
+        <div onclick="setLang('ru')"><img src="https://flagcdn.com/w20/ru.png"> Русский</div>
+        <div onclick="setLang('de')"><img src="https://flagcdn.com/w20/de.png"> Deutsch</div>
+        <div onclick="setLang('ro')"><img src="https://flagcdn.com/w20/ro.png"> Română</div>
+        <div onclick="setLang('es')"><img src="https://flagcdn.com/w20/es.png"> Español</div>
+        <div onclick="setLang('pt')"><img src="https://flagcdn.com/w20/pt.png"> Português</div>
+        <div onclick="setLang('ar')"><img src="https://flagcdn.com/w20/sa.png"> العربية</div>
+    </div>
+    
+    <button class="orange-btn" onclick="toggleLang()">
+       🌐 <span id="current-lang">EN</span>
+    </button>
+</div>
+
+<div id="google_translate_element" style="display:none;"></div>
+<style>
+.goog-te-banner-frame, .goog-te-balloon-frame, .goog-te-gadget, .goog-te-combo, .skiptranslate {
+    display: none !important;
+}
+body { top: 0px !important; position: static !important; }
+
+.lang-wrapper { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+.orange-btn { 
+    background: #ff8c00; color: white; border: none; padding: 10px 20px; 
+    border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.lang-dropdown {
+    display: none; background: white; border-radius: 10px; position: absolute;
+    bottom: 50px; right: 0; width: 150px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.lang-dropdown div {
+    padding: 10px; cursor: pointer; color: #333; display: flex; align-items: center; gap: 10px;
+}
+.lang-dropdown div:hover { background: #f0f0f0; }
+.lang-dropdown img { width: 20px; }
+</style>
+
+<script>
+function toggleLang() {
+    const box = document.getElementById("langBox");
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+}
+
+function setLang(lang) {
+    let select = document.querySelector("select.goog-te-combo");
+    if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+        document.getElementById("current-lang").innerText = lang.toUpperCase();
+        toggleLang();
+    } else {
+        setTimeout(() => setLang(lang), 500);
+    }
+}
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+
+
+
+
+  <style>
+.footer{
+  background:#0b1b2b;
+  color:#fff;
+  padding:40px 20px;
+  font-family:Arial;
+}
+
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.desc{
+  margin-bottom:30px;
+  color:#cfd8e3;
+  line-height:1.6;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.footer h3{
+  margin-bottom:10px;
+}
+
+.footer a{
+  display:block;
+  color:#cfd8e3;
+  text-decoration:none;
+  margin:5px 0;
+}
+
+.footer a:hover{
+  color:orange;
+}
+
+.copyright{
+  margin-top:30px;
+  text-align:center;
+  color:#8899aa;
+  font-size:14px;
+}
+
+/* responsive */
+@media(max-width:768px){
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <p class="desc">
+      Exceptional Service. Authentic Experiences. Alfa Adventure & Travel delivers premium tours and private transfers across Zanzibar and Tanzania. With professional drivers and experienced guides, we ensure a seamless travel experience from arrival to departure. Discover the beauty of the island in comfort and style.
+    </p>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="packages.html">All Packages</a>
+        <a href="#">Safari Tanzania</a>
+        <a href="transfer.html">Transfers</a>
+        <a href="#">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>
+        <h3>Popular Tours</h3>
+        <a href="#">Safari Blue</a>
+        <a href="#">Stone Town Tour</a>
+        <a href="#">Dolphin Swimming</a>
+        <a href="#">Spice Farm Tour</a>
+        <a href="#">Prison Island</a>
+        <a href="#">Sunset Cruise</a>
+      </div>
+
+      <section id="contact"
+        <h3>Contact Us</h3>
+        <p>+255678859687</p>
+        <p>Available 24/7</p>
+        <p>booking.zanzibaroldtravel@gmail.com</p>
+        <p>Zanzibar, Tanzania</p>
+      </section>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Zanzibar Old Travel. All rights reserved.
+    </div>
+
+  </div>
+</footer>
