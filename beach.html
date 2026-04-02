@@ -290,6 +290,95 @@ body{
   
 
 
+
+
+<div class="lang-wrapper">
+    <div id="langBox" class="lang-dropdown">
+        <div onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png"> English</div>
+        <div onclick="setLang('fr')"><img src="https://flagcdn.com/w20/fr.png"> Français</div>
+        <div onclick="setLang('it')"><img src="https://flagcdn.com/w20/it.png"> Italiano</div>
+        <div onclick="setLang('ru')"><img src="https://flagcdn.com/w20/ru.png"> Русский</div>
+        <div onclick="setLang('de')"><img src="https://flagcdn.com/w20/de.png"> Deutsch</div>
+        <div onclick="setLang('ro')"><img src="https://flagcdn.com/w20/ro.png"> Română</div>
+        <div onclick="setLang('es')"><img src="https://flagcdn.com/w20/es.png"> Español</div>
+        <div onclick="setLang('pt')"><img src="https://flagcdn.com/w20/pt.png"> Português</div>
+        <div onclick="setLang('ar')"><img src="https://flagcdn.com/w20/sa.png"> العربية</div>
+    </div>
+    
+    <button class="orange-btn" onclick="toggleLang()">
+       🌐 <span id="current-lang">EN</span>
+    </button>
+</div>
+
+<div id="google_translate_element" style="display:none;"></div>
+<style>
+.goog-te-banner-frame, .goog-te-balloon-frame, .goog-te-gadget, .goog-te-combo, .skiptranslate {
+    display: none !important;
+}
+body { top: 0px !important; position: static !important; }
+
+.lang-wrapper { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+.orange-btn { 
+    background: #ff8c00; color: white; border: none; padding: 10px 20px; 
+    border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.lang-dropdown {
+    display: none; background: white; border-radius: 10px; position: absolute;
+    bottom: 50px; right: 0; width: 150px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.lang-dropdown div {
+    padding: 10px; cursor: pointer; color: #333; display: flex; align-items: center; gap: 10px;
+}
+.lang-dropdown div:hover { background: #f0f0f0; }
+.lang-dropdown img { width: 20px; }
+</style>
+
+<script>
+function toggleLang() {
+    const box = document.getElementById("langBox");
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+}
+
+function setLang(lang) {
+    let select = document.querySelector("select.goog-te-combo");
+    if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+        document.getElementById("current-lang").innerText = lang.toUpperCase();
+        toggleLang();
+    } else {
+        setTimeout(() => setLang(lang), 500);
+    }
+}
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+  
+</body>
+  </html>
+
+
+
+
+
+
+  
+
   <style>
 .footer{
   background:#0b1b2b;
