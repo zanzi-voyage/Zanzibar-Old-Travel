@@ -8,225 +8,190 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     
-    <style>
-        :root {
-            --primary-orange: #ff8c00;
-            --bg-light: #f4f7f6;
-            --text-dark: #333;
-        }
+    
+    
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-light);
-            margin: 0;
-            padding: 100px 20px;
-        }
 
-        /* Grid Layout kwa ajili ya Box 7 */
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            padding: 20px;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #eee;
-        }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
 
-        .header {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
 
-        .icon-box {
-            background: #fff5eb;
-            font-size: 24px;
-            padding: 10px;
-            border-radius: 12px;
-            height: fit-content;
-        }
+<div class="services-container">
+    <div class="service-card">
+        <div class="card-header">
+            <div class="icon-box">🚢</div>
+            <div class="title-area">
+                <h3>Ferry Port Transfer</h3>
+                <p>To/from North & South beach hotels</p>
+            </div>
+        </div>
+        
+        <div class="info-bar">
+            <div class="info-item"><strong>40-70m</strong><span>TIME</span></div>
+            <div class="info-item"><strong>1-4</strong><span>PAX</span></div>
+            <div class="info-item"><strong class="price">$35</strong><span>PER CAR</span></div>
+        </div>
 
-        .header h2 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: var(--text-dark);
-        }
+        <ul class="features">
+            <li>Flexible timing</li>
+            <li>Port assistance</li>
+            <li>Safe & secure</li>
+            <li>Experienced drivers</li>
+        </ul>
 
-        .header p {
-            margin: 4px 0 0 0;
-            color: #777;
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
-
-        .stats-row {
-            display: flex;
-            justify-content: space-between;
-            background: #fafafa;
-            padding: 12px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .stat {
-            flex: 1;
-        }
-
-        .stat b {
-            display: block;
-            font-size: 0.9rem;
-        }
-
-        .stat span {
-            font-size: 0.7rem;
-            color: #999;
-            text-transform: uppercase;
-        }
-
-        .price-tag {
-            color: var(--primary-orange);
-            font-weight: bold;
-        }
-
-        .features {
-            margin: 0 0 20px 0;
-            padding: 0;
-            list-style: none;
-            flex-grow: 1;
-        }
-
-        .features li {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 6px;
-            padding-left: 15px;
-            position: relative;
-        }
-
-        .features li::before {
-            content: "•";
-            color: var(--primary-orange);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .btn {
-            background: var(--primary-orange);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        /* Badge ya namba ya Box */
-        .box-number {
-            font-size: 0.7rem;
-            background: #333;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 20px;
-            width: fit-content;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container" id="grid-container">
+        <button class="book-btn">BOOK NOW</button>
     </div>
 
-<script>
-    const container = document.getElementById('grid-container');
-    
-    // Tunatengeneza box 7 kwa kutumia Loop
-    for (let i = 1; i <= 7; i++) {
-        container.innerHTML += `
-            <div class="card">
-                
-                <div class="header">
-                    <div class="icon-box">🚢</div>
-                    <div>
-                        <h2>Ferry Port Transfer</h2>
-                        <p>To/from North & South beach hotels</p>
-                    </div>
-                </div>
-
-                <div class="stats-row">
-                    <div class="stat">
-                        <b>40-70m</b>
-                        <span>Time</span>
-                    </div>
-                    <div class="stat">
-                        <b>1-4</b>
-                        <span>Pax</span>
-                    </div>
-                    <div class="stat">
-                        <b class="price-tag">$35</b>
-                        <span>Per Car</span>
-                    </div>
-                </div>
-
-                <ul class="features">
-                    <li>Flexible timing</li>
-                    <li>Port assistance</li>
-                    <li>Safe & secure</li>
-                    <li>Experienced drivers</li>
-                </ul>
-            <a href="trabok.html">
-                <button class="btn">Book Now</button>
+    <div class="service-card">
+        <div class="card-header">
+            <div class="icon-box">✈️</div>
+            <div class="title-area">
+                <h3>Airport Transfer</h3>
+                <p>Private transport to any destination</p>
             </div>
-            </a>
-        `;
-    }
-</script>
+        </div>
+        
+        <div class="info-bar">
+            <div class="info-item"><strong>30-50m</strong><span>TIME</span></div>
+            <div class="info-item"><strong>1-4</strong><span>PAX</span></div>
+            <div class="info-item"><strong class="price">$25</strong><span>PER CAR</span></div>
+        </div>
 
-</body>
-</html>
+        <ul class="features">
+            <li>Meet & Greet</li>
+            <li>Luggage help</li>
+            <li>Air conditioned</li>
+            <li>24/7 Service</li>
+        </ul>
 
+        <button class="book-btn">BOOK NOW</button>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
 
 
 
 
 
+
+
+
+<style>
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    background: #fff5eb;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.title-area h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.title-area p {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.info-bar {
+    background: #f8f9fa;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.info-item span {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.info-item .price {
+    color: #ff8c00;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.features li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.features li::before {
+    content: "•";
+    color: #ff8c00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.book-btn {
+    background: #ff8c00;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.book-btn:hover {
+    background: #e67e00;
+}
+
+
+</style>
 
 
 
