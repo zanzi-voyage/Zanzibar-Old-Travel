@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Taxi Booking</title>
+
+<style>
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f5f5f5;
+  padding:40px 20px;
+}
+
+/* CONTAINER */
+.booking-box{
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.booking-box h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.booking-box input,
+.booking-box select,
+.booking-box textarea{
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* TEXTAREA */
+.booking-box textarea{
+  height: 100px;
+}
+
+/* BUTTON */
+.booking-box button{
+  width: 100%;
+  padding: 14px;
+  background: orange;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.booking-box button:hover{
+  background: darkorange;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="booking-box">
+
+  <h2>Book a Taxi</h2>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- WEB3FORMS KEY -->
+    <input type="hidden" name="access_key" value="WEKA_API_KEY_YAKO_HAPA">
+
+    <!-- NAME -->
+    <input type="text" name="name" placeholder="Full Name" required>
+
+    <!-- EMAIL -->
+    <input type="email" name="email" placeholder="Email Address" required>
+
+    <!-- PHONE -->
+    <input type="text" name="phone" placeholder="Phone Number" required>
+
+    <!-- COUNTRY -->
+    <input type="text" name="country" placeholder="Your Country">
+
+    <!-- PICKUP -->
+    <input type="text" name="pickup" placeholder="Pickup Location" required>
+
+    <!-- DROP OFF -->
+    <input type="text" name="dropoff" placeholder="Drop-off Location" required>
+
+    <!-- DATE -->
+    <input type="text" name="date" placeholder="Select Date" onfocus="(this.type='date')" required>
+
+    <!-- TIME -->
+    <input type="time" name="time" required>
+
+
+<input type="text" name="passngers" placeholder="Number of passengers"required>
+    
+    <!-- MESSAGE -->
+    <textarea name="message" placeholder="Extra Notes"></textarea>
+
+    <!-- NO CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- BUTTON -->
+    <button type="submit">Book Now</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
