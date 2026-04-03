@@ -1,71 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zanzibar Old Travel</title>
 
-
-
-
+<title>Booking Form</title>
 
 <style>
 
-  form{
-  max-width: 400px;
+body{
+  font-family: Arial, sans-serif;
+  background:#f5f5f5;
+  padding:40px 20px;
 }
 
-input, textarea{
+/* CONTAINER */
+.booking-box{
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.booking-box h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.booking-box input,
+.booking-box select,
+.booking-box textarea{
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 15px;
   border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-button{
+/* BUTTON */
+.booking-box button{
+  width: 100%;
+  padding: 14px;
   background: orange;
   color: white;
-  padding: 12px;
   border: none;
   border-radius: 8px;
-  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
 }
+
+.booking-box button:hover{
+  background: darkorange;
+}
+
 </style>
+</head>
 
-  
+<body>
 
+<div class="booking-box">
 
+  <h2>Book Your Tour</h2>
 
+  <form action="https://formsubmit.co/el/faxabi" method="POST">
 
+    <input type="text" name="name" placeholder="Full Name" required>
 
+    <input type="email" name="email" placeholder="Email Address" required>
 
-<form action="https://formsubmit.co/el/faxabi" method="POST">
+    <input type="text" name="phone" placeholder="Phone Number" required>
 
-  <input type="text" name="name" placeholder="Your Name" required>
-  <br><br>
+    
 
-  <input type="email" name="email" placeholder="Your Email" required>
-  <br><br>
+    <!-- PEOPLE -->
+    <select name="people" required>
+      <option value="">Number of People</option>
+      <option>1 Person</option>
+      <option>2 People</option>
+      <option>3 People</option>
+      <option>4 People</option>
+      <option>5+ People</option>
+    </select>
 
-  <input type="text" name="phone" placeholder="Phone Number" required>
-  <br><br>
+    <!-- DATE -->
+    <input type="date" name="date" required>
 
-  <input type="number" name="people" placeholder="Number of People" min="1" required>
-  <br><br>
+    <!-- MESSAGE -->
+    <textarea name="message" placeholder="Extra Details"></textarea>
 
-  <textarea name="message" placeholder="Your Booking Details" required></textarea>
-  <br><br>
+    <input type="hidden" name="_captcha" value="false">
 
-  <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Book Now</button>
 
-  <button type="submit">Book Now</button>
+  </form>
 
-</form>
+</div>
 
-
-
-
-
-  
 </body>
 </html>
